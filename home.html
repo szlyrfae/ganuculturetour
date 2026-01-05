@@ -1,76 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ganu Culture Tour</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
 
-    <body>
-        <!--navigation-->
-        <nav>
-            <ul>
-                <li style="float:left">
-                    <a href="home.html"><img src="PICTURE/LOGO.png" alt="LOGO" style="width:30px;height:30px"></a>
-                </li>
-                <li>
-                    <a href="home.html">Home</a>
-                </li>
-                <li>
-                    <a href="about.html">About</a>
-                </li>
-                <li>
-                    <a href="forum.html">Forum</a>
-                </li>
-                <li>
-                    <a href="gallery.html">Gallery</a>
-                </li>
-                <li>
-                    <a href="explore.html" style="border: 1;">Explore</a>
-                </li>
-            </ul>
-        </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganu Culture Tour</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+</head>
 
-        <!--content-->
-        <h1>Ganu Culture Tour</h1>
+<body class="home">
+    <!--navigation-->
+    <nav>
+        <ul class="navbar">
+            <li>
+                <a href="home.html"><img src="MEDIA/PICTURE/LOGO.png" alt="LOGO" style="width:50px;height:50px"></a>
+            </li>
+            <li><a href="home.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="forum.html">Forum</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="explore.html" class="explore-btn">Explore</a></li>
+        </ul>
+    </nav>
 
-        <!--sitemap-->
+    <!--Slideshow-->
+    <div class="slideshow-container">
+        <div class="slides fade">
+            <img src="MEDIA/PICTURE/SLIDESHOW 1.jpeg" style="width:100%">
+        </div>
+        <div class="slides fade">
+            <img src="MEDIA/PICTURE/SLIDESHOW 2.jpeg" style="width:100%">
+        </div>
+        <div class="slides fade">
+            <img src="MEDIA/PICTURE/SLIDESHOW 3.jpeg" style="width:100%">
+        </div>
 
-        <!--footer-->
-        <footer class="sitemap">
-            <div class="footer-container">
-                <div class="footer-log">
-                    <img src="PICTURE/LOGO.png" alt="LOGO" style="width:80px;height:80px">
-                </div>
+        <div class="global-caption left-center">
+            <h1>GANU</h1>
+            <h1>CULTURE TOUR</h1>
+        </div>
+        <div class="global-caption bottom-right explore-btn1">
+            <a href="explore.html">Maghi Explore</a>
+        </div>
 
-                <div class="footer-column">
-                    <h4>Who are we</h4>
-                    <a href="about.html">About</a>
-                </div>
+    </div>
 
-                <div class="footer-column">
-                    <h4>What we serve</h4>
-                    <a href="explore.html">Explore</a>
-                    <a href="cuisine.html">Cuisine</a>
-                    <a href="places.html">Places</a>
-                    <a href="culture.html">Culture & Annual Fest</a>
-                    <a href="culturefest.html">Culture Fest</a>
-                    <a href="annualfest.html">Annual Fest</a>
-                </div>
 
-                <div class="footer-column">
-                    <h4>Others</h4>
-                    <a href="forum.html">Forum</a>
-                    <a href="gallery.html">Gallery</a>
-                </div>
+    <!--sitemap-->
+    <footer class="sitemap">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a href="home.html"><img src="MEDIA/PICTURE/LOGO.png" alt="LOGO" style="width:80px;height:80px"></a>
             </div>
 
-        </footer>
+            <div class="footer-column">
+                <h4>Who are we</h4>
+                <a href="about.html">About</a>
+            </div>
 
-        <footer class="credit">
-            <p>&copy; 2025 Ganu Culture Tour. All rights reserved.</p>
-        </footer>
+            <div class="footer-column">
+                <h4>What we serve</h4>
+                <a href="explore.html">Explore</a>
+                <a href="cuisine.html">Cuisine</a>
+                <a href="places.html">Places</a>
+                <a href="culture.html">Culture & Annual Fest</a>
+                <a href="culturefest.html">Culture Fest</a>
+                <a href="annualfest.html">Annual Fest</a>
+            </div>
 
-    </body>
+            <div class="footer-column">
+                <h4>Others</h4>
+                <a href="forum.html">Forum</a>
+                <a href="gallery.html">Gallery</a>
+            </div>
+        </div>
+    </footer>
+
+    <!--footer-->
+    <footer class="credit">
+        <p>&copy; 2026 Ganu Culture Tour. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
 </html>
