@@ -19,6 +19,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 10;
+    list-style: none;
 }
 
 .navbar li:first-child {
@@ -41,11 +42,37 @@ body {
     font-weight: bold;
 }
 
+.navbar li {
+  position: relative;
+}
+
 .explore-btn {
     border: 1px solid black;
     padding: 8px 12px;
     border-radius: 4px;
     margin-right: 20px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  min-width: 180px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  z-index: 20;
+}
+
+.dropdown-menu li a:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 /* Footer */
@@ -97,6 +124,8 @@ body {
 .slides img {
     vertical-align: middle;
     width: 100%;
+    height: 100vh;
+    filter: brightness(50%);
 }
 
 .slideshow-container {
@@ -137,9 +166,7 @@ body {
     position: absolute;
     color: white;
     text-shadow: 2px 2px 5px black;
-    /* readability */
     z-index: 10;
-    /* ensures text is above slideshow */
 }
 
 /* Positioning options */
@@ -151,76 +178,84 @@ body {
 }
 
 .left-center h1 {
-    font-size: 100px;
-    font-family: monaco, monospace;
+    font-size: 80px;
+    font-family: 'Poppins', sans-serif;
     font-weight: bold;
+    color: white;
+    letter-spacing: 1.5px;
+}
+
+.left-center p {
+    font-size: 25px;
+    font-family: 'Raleway', sans-serif;
     color: white;
 }
 
 .bottom-right {
     bottom: 10%;
-    right: 5%;
-    text-align: right;
+    right: 12%;
+    text-align: center;
 }
 
 /* Arrow Explore */
 .explore-btn1 a {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-decoration: none;
-  font-size: 2em;
-  display: inline-block;
-  font-family: Montserrat;
-  text-transform: uppercase;
-  padding: 0.5em 2em;
-  border: 5px solid white;
-  transition: 0.02s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
-  font-weight: bold;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    padding: 0.5em 2em;
+    border: 5px solid white;
+    transition: 0.02s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+    font-weight: bold;
+    white-space: nowrap;
 }
 
 .explore-btn1 a::before {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 100%;
-  bottom: 0;
-  background: white;
-  transition: 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1), left 0.3s cubic-bezier(0.1, 0, 0.1, 1);
-  z-index: -1;
-  font-weight: bold;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: white;
+    transition: 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1), left 0.3s cubic-bezier(0.1, 0, 0.1, 1);
+    z-index: -1;
+    font-weight: bold;
 }
 
 .explore-btn1 a::after {
-  content: "";
-  display: inline-block;
-  background-image: url("https://cdn-icons-png.flaticon.com/128/109/109617.png");
-  position: absolute;
-  top: 0;
-  left: calc(100% - 3em);
-  right: 3em;
-  bottom: 0;
-  background-size: 1.5em;
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: right 0.3s cubic-bezier(0.1, 0, 0.1, 1);
+    content: "";
+    display: inline-block;
+    background-image: url("https://cdn-icons-png.flaticon.com/128/109/109617.png");
+    position: absolute;
+    top: 0;
+    left: calc(100% - 3em);
+    right: 3em;
+    bottom: 0;
+    background-size: 1.5em;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: right 0.3s cubic-bezier(0.1, 0, 0.1, 1);
 }
 
 .explore-btn1 a:hover {
-  padding: 0.5em 3.5em 0.5em 0.5em;
+    padding: 0.5em 3.5em 0.5em 0.5em;
 }
 
 .explore-btn1 a:hover::before {
-  left: calc(100% - 3em);
-  right: 0;
-  transition: 0.3s cubic-bezier(0.1, 0, 0.1, 1), left 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+    left: calc(100% - 3em);
+    right: 0;
+    transition: 0.3s cubic-bezier(0.1, 0, 0.1, 1), left 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
 }
 
 .explore-btn1 a:hover::after {
-  right: 0;
-  transition: right 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+    right: 0;
+    transition: right 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
 }
